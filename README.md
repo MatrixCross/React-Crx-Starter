@@ -1,6 +1,7 @@
 # react-crx-template
 
 本仓库
+
 > fork from: [React-crx-template](https://github.com/MatrixCross/React-Crx-Starter)
 
 ## 简介
@@ -24,7 +25,6 @@ pnpm dev
 开发环境，调试用的结果代码放在根目录 `local` 文件夹下
 
 ## 发布打包
-
 拉取代码后
 
 ```bash
@@ -35,5 +35,6 @@ pnpm build
 
 ## 入群交流-大前端交流群
 大前端交流群, 我们的口号是卷卷卷!
+
 ![图片描述](https://raw.githubusercontent.com/MatrixCross/React-Crx-Starter/master/src/assets/20240703225505.jpg)
 
