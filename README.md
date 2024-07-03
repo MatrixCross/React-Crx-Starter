@@ -1,17 +1,17 @@
 # react-crx-template
 
-本仓库
+[中文文档](https://github.com/MatrixCross/React-Crx-Starter/blob/master/README_CN.md)
 
 > fork from: [React-crx-template](https://github.com/MatrixCross/React-Crx-Starter)
 
-## 简介
+## Profile
 
-简单好用的chrome插件开发模板
+A simple and easy-to-use Chrome extension development template
 
 ## Features
 
-- 🚀 支持React 18版本的manifest
-- 🖥 支持background,contentScript,popup的热更新
+- 🚀 Manifest supporting React version 18
+- 🖥 Support hot update for background, contentScript, and popup
 - 📦 vite + react + tailwindcss
 
 ## 开发
@@ -22,19 +22,20 @@
 pnpm i
 pnpm dev
 ```
-开发环境，调试用的结果代码放在根目录 `local` 文件夹下
 
-## 发布打包
+Development environment, the result code for debugging is placed in the root directory in the `local` folder
+
+## releasePackaging
 拉取代码后
+
+After pulling the code
 
 ```bash
 pnpm build
 ```
 
-生成环境，代码放在根目录 `extension` 文件夹下
+Production environment, code is placed in the root directory `extension` folder
 
-## 入群交流-大前端交流群
-大前端交流群, 我们的口号是卷卷卷!
+## WeChatGroupQrCode
 
 ![图片描述](https://raw.githubusercontent.com/MatrixCross/React-Crx-Starter/master/src/assets/20240703225505.jpg)
-
