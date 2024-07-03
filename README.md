@@ -16,7 +16,7 @@ A simple and easy-to-use Chrome extension development template
 
 ## 开发
 
-拉取代码后
+After pulling the code
 
 ```bash
 pnpm i
