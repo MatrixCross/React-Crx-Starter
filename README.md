@@ -33,5 +33,7 @@ pnpm build
 
 生成环境，代码放在根目录 `extension` 文件夹下
 
-## 入群交流
-<img src="https://img01.yzcdn.cn/upload_files/2022/10/24/FuwLuT7WwQXQS8vVOc2B7zxVhjzF.jpeg" width="50%">
+## 入群交流-大前端交流群
+大前端交流群, 我们的口号是卷卷卷!
+![图片描述](https://raw.githubusercontent.com/MatrixCross/React-Crx-Starter/master/src/assets/20240703225505.jpg)
+
