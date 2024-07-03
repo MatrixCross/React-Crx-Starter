@@ -1,8 +1,7 @@
 # react-crx-template
 
+本仓库
 > fork from: [React-crx-template](https://github.com/MatrixCross/React-Crx-Starter)
-
-note: 因为contentScript里的内容使用shadow-dom注入到body，naive-ui的样式可能不正常，可以用回element-plus，也可以不用shadow-dom，看注释进行修改，要注意不用shadow-dom可能导致和原有页面样式发生冲突。
 
 ## 简介
 
