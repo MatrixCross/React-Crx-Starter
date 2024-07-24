@@ -1,4 +1,5 @@
-#root, #vite_crx_content_script {
-  --primark-color: #7748F9;
+#root,
+#vite_crx_content_script {
+  --primark-color: #7748f9;
   --primark-bg-color: #f1ecfe;
 }

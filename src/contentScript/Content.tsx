@@ -1,7 +1,7 @@
-import '../assets/styles/talinwind.css'
 import './Content.style.scss'
 import GithubIcon from '~/assets/icons/github.svg'
-const Content = () => {
+
+function Content() {
   const openPopup = () => {
     chrome.runtime.sendMessage({ action: 'openPopup' }, (response) => {
       console.log(response)
@@ -9,7 +9,7 @@ const Content = () => {
   }
   return (
     <div onClick={openPopup} data-content>
-      <GithubIcon className={'w-full h-full'} />
+      <GithubIcon className="h-full w-full" />
     </div>
   )
 }

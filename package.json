@@ -1,64 +1,65 @@
 {
   "name": "crx-starter",
+  "type": "module",
   "version": "0.0.1",
   "description": "Simple Chrome Extension Vite Starter starter",
+  "author": "TinssonTai",
   "scripts": {
     "dev": "cross-env CRX_ENV=development run-p dev:*",
     "dev:code": "vite build",
     "dev:content": "vite build --config vite.content.config.ts",
-    "dev:copy": "node scripts/monitor.js",
+    "dev:copy": "jiti scripts/monitor.ts",
     "build": "cross-env CRX_ENV=production pnpm clear && vite build && vite build --config vite.content.config.ts && node scripts/monitor.js",
     "clear": "rimraf extension",
-    "prepare": "husky install"
-  },
-  "author": "TinssonTai",
-  "devDependencies": {
-    "@iconify/json": "^2.2.55",
-    "@types/chrome": "^0.0.233",
-    "@types/node": "^18.16.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "chokidar": "^3.5.3",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.5.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-tailwindcss": "^3.17.0",
-    "fs-extra": "^11.1.1",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.1",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.8",
-    "rimraf": "^5.0.0",
-    "terser": "^5.31.1",
-    "typescript": "^5.0.4",
-    "unplugin-auto-import": "^0.15.3",
-    "unplugin-icons": "^0.16.1",
-    "vite": "^4.3.1",
-    "vite-plugin-replace": "^0.1.1",
-    "vite-plugin-svgr": "^4.2.0",
-    "ws": "^8.13.0"
+    "postinstall": "simple-git-hooks",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
-    "idb": "^7.1.1",
-    "postcss": "^8.4.38",
+    "idb": "^8.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.77.5",
-    "tailwindcss": "^3.4.4"
+    "sass": "^1.77.8"
   },
-  "lint-staged": {
-    "src/**/*.{js,ts,vue}": "eslint --fix"
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.23.2",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint-react/eslint-plugin": "^1.5.30",
+    "@iconify/json": "^2.2.230",
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^18.19.41",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "@unocss/eslint-plugin": "^0.61.5",
+    "chokidar": "^3.6.0",
+    "commitlint": "^19.3.0",
+    "cross-env": "^7.0.3",
+    "cz-git": "^1.9.4",
+    "eslint": "^9.7.0",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "fs-extra": "^11.2.0",
+    "jiti": "^1.21.6",
+    "lint-staged": "^15.2.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.5.4",
+    "unocss": "^0.61.5",
+    "unplugin-auto-import": "^0.18.0",
+    "unplugin-icons": "^0.19.0",
+    "vite": "^5.3.4",
+    "vite-plugin-replace": "^0.1.1",
+    "vite-plugin-svgr": "^4.2.0",
+    "ws": "^8.18.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "simple-git-hooks": {
+    "commit-msg": "npx --no-install commitlint --edit \"$1\"",
+    "pre-commit": "pnpm lint"
   }
 }

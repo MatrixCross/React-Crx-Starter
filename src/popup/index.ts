@@ -1,3 +1,4 @@
-import '../assets/styles/talinwind.css'
+import 'uno.css'
 import { createMyApp } from './main.tsx'
+
 createMyApp()

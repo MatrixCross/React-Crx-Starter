@@ -1,4 +1,4 @@
-export const onMessage = (taskId: string, callback) => {
+export function onMessage(taskId: string, callback) {
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const { params } = request
     if (request.taskId === taskId) {
@@ -7,45 +7,46 @@ export const onMessage = (taskId: string, callback) => {
         result.then((info) => {
           sendResponse(info)
         })
-      } else {
+      }
+      else {
         sendResponse(result)
       }
     }
   })
 }
 
-export const sendMessage = (taskId: string, params: any) => {
+export function sendMessage(taskId: string, params: any) {
   return new Promise((resolve) => {
     chrome.runtime.sendMessage(
       {
         taskId,
-        params
+        params,
       },
       (result) => {
         resolve(result)
-      }
+      },
     )
   })
 }
 
-export const getCache = async (keyName: string): Promise<any> => {
+export async function getCache(keyName: string): Promise<any> {
   const res = await sendMessage('get-value-bg', {
-    keyName
+    keyName,
   })
   return res
 }
 
-export const setCache = async (keyName: string, value: any) => {
+export async function setCache(keyName: string, value: any) {
   const res = await sendMessage('set-value-bg', {
     keyName,
-    value
+    value,
   })
   return res
 }
 
-export const delCache = async (keyName: string) => {
+export async function delCache(keyName: string) {
   const res = await sendMessage('del-value-bg', {
-    keyName
+    keyName,
   })
   return res
 }
